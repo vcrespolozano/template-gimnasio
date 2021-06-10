@@ -79,7 +79,8 @@ $(document).ready(function(){
 });
 
 $(window).on('load', function(){   
-    
+    // Igualamos los anchos de carrusel y contenido
+    altos_about();
 });
 
 $(window).scroll(function (event) {
