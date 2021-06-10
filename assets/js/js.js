@@ -37,7 +37,7 @@ $(document).ready(function(){
 
     // Scroll to content
     $('.scroll_to_content').click(function(){
-        smoothScrollTo('inicio');
+        smoothScrollTo('sobre');
     });
 
     // Animación de la galería
