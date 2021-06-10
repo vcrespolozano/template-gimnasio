@@ -1,0 +1,198 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/***** CONTACTO *****/
+.contacto {
+    position       : relative;
+    padding        : 30px;
+    background     : url('../img/pie.jpg') center no-repeat;
+    background-size: cover;
+    border-top     : 1px solid $color_principal;
+    z-index        : 1;
+
+    &:before {
+        content: '';
+        @include absolutePos(0, 0, 0, 0);
+        background: rgba(0 ,0 ,0, .75);
+        z-index   : 1;
+    }
+
+    .contenedor_pie {
+        position : relative;
+        display  : flex;
+        flex-wrap: wrap;
+        max-width: $w_1260;
+        margin   : 0 auto;
+        z-index  : 2;
+
+        .titulo {
+            font-size     : 22px;
+            line-height   : 30px;
+            font-weight   : 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color         : $color_principal
+        }
+
+        .bloque_pie {
+            position: relative;
+            z-index : 1;
+
+            &#ubicacion {
+                flex-basis: 30%;
+                order     : 1;
+            }
+
+            &#redes {
+                flex-basis: 25%;
+                order     : 2;
+            }
+
+            &#contacto {
+                flex-basis: 45%;
+                order     : 3;
+            }
+
+            ul {
+                list-style: none;
+                margin    : 15px 0;
+
+                li {
+                    color      : $color_claro;
+                    font-size  : 16px;
+                    line-height: 32px;
+
+                    strong {
+                        font-weight: 600;
+                        color      : $color_principal;
+                    }
+
+                    a {
+                        color: $color_principal;
+                    }
+                }
+            }
+        }
+
+        .redes_sociales {
+            display   : block;
+            margin-top: 15px;
+
+            .rrss_link {
+                position      : relative;
+                display       : inline-block;
+                vertical-align: middle;
+                margin-right  : 12px;
+                width         : 40px;
+                height        : 40px;
+                font-size     : 22px;
+                line-height   : 40px;
+                border        : 1px solid $color_principal;
+                color         : $color_claro;
+                z-index       : 1;
+                text-align    : center;
+                @include transicion(200ms);
+
+                i {
+                    position: relative;
+                    z-index : 2;
+                }
+
+                &:after {
+                    content: '';
+                    @include absolutePos(0, 0, 0, 0);
+                    background: $color_claro;
+                    z-index   : 1;
+                    @include transicion(200ms);
+                    @include scalar(0);
+                }
+            }
+        }
+
+        form {
+            position  : relative;
+            margin-top: 15px;
+            z-index   : 1;
+
+            .caja_campo {
+                position      : relative;
+                width         : 100%;
+                margin-bottom : 20px;
+                z-index       : 1;
+    
+                &.mitad {
+                    width: 49%;
+                }
+                
+                label {
+                    display      : block;
+                    color        : $color_principal;
+                    font-size    : 16px;
+                    margin-bottom: 8px;
+                }
+                
+                input {
+                    display    : block;
+                    width      : 100%;
+                    margin     : 0 auto;
+                    background : none;
+                    border     : 1px solid $color_claro;
+                    color      : $color_claro;
+                    line-height: 50px;
+                    height     : 50px;
+                    font-size  : 18px;
+                    padding    : 0 20px;
+                    @include transicion(200ms);
+    
+                    &:focus {
+                        border-color: $color_principal;
+                    }
+                }
+    
+                textarea {
+                    display    : block;
+                    width      : 100%;
+                    margin     : 0 auto;
+                    background : none;
+                    border     : 1px solid $color_claro;
+                    color      : $color_claro;
+                    font-size  : 18px;
+                    line-height: 24px;
+                    height     : 150px;
+                    padding    : 10px 20px;
+                    resize     : none;
+                    @include transicion(200ms);
+    
+                    &:focus {
+                        border-color: $color_principal;
+                    }
+                }
+                
+                .contador_char {
+                    position   : absolute;
+                    bottom     : 0;
+                    right      : 0;
+                    font-size  : 12px;
+                    color      : $color_claro;
+                    line-height: 40px;
+                    text-align : right;
+                }
+            }
+
+            .btn_form {
+                display      : block;
+                width        : 100%;
+                margin-top   : 15px;
+                border       : 1px solid $color_claro;
+                border-radius: 0;
+                background   : $color_principal;
+                color        : $color_claro;
+                font-size    : 18px;
+                line-height  : 45px;
+                height       : 45px;
+                text-align   : center;
+                @include transicion(300ms);
+            }
+        }
+    }
+}

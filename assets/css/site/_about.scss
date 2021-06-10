@@ -1,0 +1,104 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** SOBRE NOSOTROS - CARRUSEL ****/
+.sobre_nosotros {
+    position: relative;
+    z-index : 1;
+
+    .contenedor_carrusel {
+        position: relative;
+        width   : 50%;
+        overflow: hidden;
+        z-index : 1;
+
+        .carrusel {
+            position: relative;
+            z-index : 1;
+    
+            img {
+                display   : block;
+                height    : auto;
+                object-fit: cover;
+                max-height: 591px;
+            }
+        }
+
+        &:after {
+            content: '';
+            @include absolutePos(-125px, -125px, auto, auto);
+            background: $color_claro;
+            width     : 250px;
+            height    : 250px;
+            margin    : 0 auto;
+            @include rotar(45deg);
+            z-index   : 2;
+        }
+
+        &:before {
+            content: '';
+            @include absolutePos(auto, auto, -60px, -60px);
+            background: $color_principal;
+            width     : 120px;
+            height    : 120px;
+            margin    : 0 auto;
+            @include rotar(45deg);
+            z-index   : 2;
+        }
+
+        .dots_carrusel {
+            @include absolutePos(auto, auto, 0, 25px);
+            @include rotar(-45deg);
+            z-index: 3;
+
+            .owl-dot {
+                display       : inline-block;
+                vertical-align: middle;
+                width         : 12px;
+                height        : 12px;
+                margin        : 0 5px;
+                border        : none;
+                border-radius : 100%;
+                background    : $color_claro;
+                @include transicion(300ms);
+
+                &.active {
+                    background: $color_oscuro;  
+                }
+            }
+        }
+    }
+
+    .contenido {
+        position  : relative;
+        width     : 50%;
+        padding   : 40px;
+        text-align: left;
+        -webkit-box-shadow: -5px 0 10px 5px rgba(0,0,0,0.3);
+        box-shadow        : -5px 0 10px 5px rgba(0,0,0,0.3);
+        z-index   : 3;
+
+        .titulo {
+            font-size    : 30px;
+            font-weight  : 600;
+            margin-bottom: 15px;
+            color        : $color_principal;
+        }
+
+        .subtitulo {
+            font-size  : 24px;
+            line-height: 28px;
+        }
+
+        .descripcion {
+            font-size  : 17px;
+            line-height: 30px;
+            text-align : justify;
+        }
+
+        .separador {
+            display: inline-block;
+        }
+    }
+
+}

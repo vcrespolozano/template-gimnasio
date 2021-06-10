@@ -1,0 +1,50 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** GALERIA DE FOTOS ****/
+.galeria {
+    position : relative;
+    padding  : 50px 0;
+    max-width: $w_1600;
+    margin   : 0 auto;
+    z-index  : 1;
+
+    .contenedor_galeria {
+        position  : relative;
+        margin-top: 50px;
+        z-index   : 1;
+
+        .item_galeria {
+            position      : relative;
+            display       : inline-block;
+            vertical-align: middle;
+            margin        : 0;
+            width         : percentage((100/4)/100);
+            z-index       : 1;
+
+            &.hover_on {
+                animation          : zoomHover;
+                animation-fill-mode: forwards;
+                animation-duration : 350ms;
+                z-index            : 2;
+
+                &.hover_off {
+                    z-index: 1;
+                }
+            }
+
+            &.hover_off {
+                animation          : zoomHoverEnd;
+                animation-fill-mode: forwards;
+                animation-duration : 150ms;
+            }
+
+            img {
+                display   : block;
+                width     : 100%;
+                height    : auto;
+                object-fit: cover;
+            }
+        }
+    }
+}

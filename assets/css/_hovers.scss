@@ -1,0 +1,24 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@media (hover: hover) {
+    .scroll_to_content:hover:after {
+        top       : 26px;
+        background: $color_principal;
+    }
+    header .menu ul li:hover {
+        color      : $color_principal;
+        text-shadow: 3px 3px 3px rgba(255,255,255,0.35);
+    }
+    .contacto .contenedor_pie .redes_sociales .rrss_link:hover {
+        color: $color_principal;
+    }
+    .contacto .contenedor_pie .redes_sociales .rrss_link:hover:after {
+        @include scalar(1);
+    }
+    .contacto .contenedor_pie form .btn_form:hover {
+        background  : $color_claro;
+        color       : $color_principal;
+        border-color: $color_principal;
+    }
+}

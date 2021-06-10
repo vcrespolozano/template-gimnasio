@@ -1,0 +1,76 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** CABECERA ***/
+header {
+    @include fixedPos(0, 0, 0, auto);
+    display           : flex;
+    justify-content   : space-between;
+    align-items       : center;
+    padding           : 15px 40px;
+    background        : rgba(25, 25, 25, .65);
+    -webkit-box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.4);
+    box-shadow        : 0px 5px 10px 5px rgba(0,0,0,0.4);
+    border-bottom     : 1px solid $principal_transparente;
+    z-index           : 5;
+
+    .logo {
+        display        : block;
+        background     : $logo;
+        width          : 232px;
+        height         : 85px;
+        background-size: contain;
+    }
+
+    .menu {
+        display: block;
+
+        ul {
+            list-style: none;
+            text-align: right;
+
+            li {
+                position      : relative;
+                display       : inline-block;
+                font-size     : 19px;
+                line-height   : 30px;
+                text-transform: uppercase;
+                font-weight   : 400;
+                padding       : 0 20px;
+                color         : $color_claro;
+                cursor        : pointer;
+                z-index       : 1;
+                @include transicion(250ms);
+
+                &:after {
+                    content: '';
+                    @include absolutePos(-7.5px, 0, auto, 0);
+                    width           : 6px;
+                    height          : 6px;
+                    background-color: $color_claro;
+                    border-radius   : 100%;
+                    margin          : auto;
+                }
+
+                &:first-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                &.active {
+                    color      : $color_principal;
+                    text-shadow: 3px 3px 3px rgba(255,255,255,0.35);
+                }
+            }
+        }
+    }
+
+    .toggle_menu {
+        display: none;
+    }
+}

@@ -1,0 +1,70 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** BANNER SUPERIOR - PARALLAX ****/
+.banner_bienvenida {
+    position             : relative;
+    display              : block;
+    height               : 100vh;
+    background-image     : url('../img/foto_1.jpg');
+    background-position  : center;
+    background-repeat    : no-repeat;
+    background-size      : cover;
+    z-index              : 1;
+
+    .textos {
+        @include absolutePos(0, 50%, 0, auto);
+        display            : block;
+        color              : $color_claro;
+        max-width          : 1024px;
+        margin             : 0 auto;
+        text-align         : center;
+        padding            : 25px;
+        background         : rgba(25, 25, 25, .6);
+        border-top         : 1px solid $principal_transparente;
+        backface-visibility: hidden;
+        @include Ytranslate(-50%);
+
+        .titulo {
+            font-size     : 45px;
+            margin-bottom : 20px;
+            letter-spacing: 3px;
+            font-weight   : 600;
+            color         : $color_principal;
+        }
+
+        .subtitulo {
+            font-size    : 20px;
+            line-height  : 20px;
+        }
+
+        .descripcion {
+            font-size      : 18px;
+            line-height    : 22px;
+            text-align     : justify;
+            text-align-last: center;
+        }
+    }
+
+    .scroll_to_content {
+        @include absolutePos(0, auto, 0, 10px);
+        display      : block;
+        margin       : 0 auto;
+        width        : 25px;
+        height       : 50px;
+        border-radius: 15px;
+        border       : 2px solid $color_claro;
+        cursor       : pointer;
+
+        &:after {
+            content: '';
+            @include absolutePos(0, 2px, 0, auto);
+            width        : 17px;
+            height       : 17px;
+            margin       : 0 auto;
+            border-radius: 100%;
+            background   : $color_claro;
+            @include transicion(350ms);
+        }
+    }
+}

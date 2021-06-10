@@ -1,0 +1,97 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/*** SERVICIOS ****/
+.servicios {
+    position             : relative;
+    background-image     : url("../../resources/servicios_bg.jpg");
+    background-attachment: fixed;
+    background-position  : center;
+    background-repeat    : no-repeat;
+    background-size      : cover;
+    padding              : 40px;
+    z-index              : 1;
+
+    .separador {
+        z-index: 2;
+    }
+
+    &:after {
+        content: '';
+        @include absolutePos(0, 0, 0, 0);
+        background: rgba(0, 0, 0, .6);
+        z-index: 1;
+    }
+
+    .contenedor_servicios {
+        position  : relative;
+        max-width : $w_1260;
+        margin    : 0 auto;
+        z-index   : 2;
+
+        .servicio {
+            display    : flex;
+            flex-wrap  : wrap;
+            align-items: center;
+            position   : relative;
+            margin     : 25px 0;
+            overflow   : hidden;
+            max-height : 150px;
+            z-index    : 1;
+
+            .foto {
+                display      : block;
+                width        : 150px;
+                height       : 150px;
+                order        : 1;
+                overflow     : hidden;
+                border       : 2px solid $color_principal;
+                border-radius: 100%;
+
+                img {
+                    display   : block;
+                    width     : 100%;
+                    height    : auto;
+                    object-fit: cover;
+                }
+            }
+
+            .textos {
+                display    : block;
+                width      : calc(100% - 180px);
+                margin-left: 30px;
+                order      : 2;
+
+                .titulo_servicio {
+                    font-size     : 20px;
+                    text-transform: uppercase;
+                    line-height   : 30px;
+                    font-weight   : 600;
+                    letter-spacing: 1px;
+                    color         : $color_principal;
+                    margin-bottom : 10px;
+                }
+
+                .descripcion {
+                    display    : block;                
+                    font-size  : 17px;
+                    line-height: 24px;
+                    text-align : justify;
+                    color      : $color_claro;
+                }
+            }
+
+            &:nth-child(2n) {
+                .foto {
+                    order: 2;
+                }
+                
+                .textos {
+                    order       : 1;
+                    margin-left : 0;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
