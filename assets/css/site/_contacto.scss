@@ -25,18 +25,10 @@
         margin   : 0 auto;
         z-index  : 2;
 
-        .titulo {
-            font-size     : 22px;
-            line-height   : 30px;
-            font-weight   : 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color         : $color_principal
-        }
-
         .bloque_pie {
-            position: relative;
-            z-index : 1;
+            position : relative;
+            font-size: 15px;
+            z-index  : 1;
 
             &#bloque_ubicacion {
                 flex-basis: 30%;
@@ -53,13 +45,22 @@
                 order     : 3;
             }
 
+            .titulo {
+                font-size     : 1.4em;
+                line-height   : 30px;
+                font-weight   : 600;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color         : $color_principal
+            }
+
             ul {
                 list-style: none;
                 margin    : 15px 0;
 
                 li {
                     color      : $color_claro;
-                    font-size  : 16px;
+                    font-size  : 1.1em;
                     line-height: 32px;
 
                     a {
@@ -122,7 +123,7 @@
                 label {
                     display      : block;
                     color        : $color_principal;
-                    font-size    : 16px;
+                    font-size    : 1.1em;
                     margin-bottom: 8px;
                 }
                 
@@ -135,7 +136,7 @@
                     color      : $color_claro;
                     line-height: 50px;
                     height     : 50px;
-                    font-size  : 18px;
+                    font-size  : 1.2em;
                     padding    : 0 20px;
                     @include transicion(200ms);
     
@@ -155,7 +156,7 @@
                     background : none;
                     border     : 1px solid $color_claro;
                     color      : $color_claro;
-                    font-size  : 18px;
+                    font-size  : 1.2em;
                     line-height: 24px;
                     height     : 150px;
                     padding    : 10px 20px;

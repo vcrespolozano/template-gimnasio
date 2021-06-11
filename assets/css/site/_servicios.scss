@@ -59,11 +59,12 @@
             .textos {
                 display    : block;
                 width      : calc(100% - 180px);
+                font-size  : 15px;
                 margin-left: 30px;
                 order      : 2;
 
                 .titulo_servicio {
-                    font-size     : 20px;
+                    font-size     : 1.3em;
                     text-transform: uppercase;
                     line-height   : 30px;
                     font-weight   : 600;
@@ -74,7 +75,7 @@
 
                 .descripcion {
                     display    : block;                
-                    font-size  : 17px;
+                    font-size  : 1.1em;
                     line-height: 24px;
                     text-align : justify;
                     color      : $color_claro;

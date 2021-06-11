@@ -154,8 +154,8 @@ const validarContacto = () => {
     // Email
     if( email.val() == '' )
     {
-        telefono.addClass('errored');
-        telefono.parent().append('<span class="error_form">Introduce tu email</span>');
+        email.addClass('errored');
+        email.parent().append('<span class="error_form">Introduce tu email</span>');
     }
     else
     {

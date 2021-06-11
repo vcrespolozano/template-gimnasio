@@ -70,28 +70,29 @@
     }
 
     .contenido {
-        position  : relative;
-        width     : 50%;
-        padding   : 40px;
-        text-align: left;
+        position          : relative;
+        width             : 50%;
+        padding           : 40px;
+        font-size         : 15px;
+        text-align        : left;
         -webkit-box-shadow: -5px 0 10px 5px rgba(0,0,0,0.3);
         box-shadow        : -5px 0 10px 5px rgba(0,0,0,0.3);
-        z-index   : 3;
+        z-index           : 3;
 
         .titulo {
-            font-size    : 30px;
+            font-size    : 2em;
             font-weight  : 600;
             margin-bottom: 15px;
             color        : $color_principal;
         }
 
         .subtitulo {
-            font-size  : 24px;
+            font-size  : 1.6em;
             line-height: 28px;
         }
 
         .descripcion {
-            font-size  : 17px;
+            font-size  : 1.1em;
             line-height: 30px;
             text-align : justify;
         }

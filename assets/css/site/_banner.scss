@@ -18,6 +18,7 @@
         color              : $color_claro;
         max-width          : 1024px;
         margin             : 0 auto;
+        font-size          : 15px;
         text-align         : center;
         padding            : 25px;
         background         : rgba(25, 25, 25, .6);
@@ -26,7 +27,7 @@
         @include Ytranslate(-50%);
 
         .titulo {
-            font-size     : 45px;
+            font-size     : 3em;
             margin-bottom : 20px;
             letter-spacing: 3px;
             font-weight   : 600;
@@ -34,12 +35,12 @@
         }
 
         .subtitulo {
-            font-size    : 20px;
+            font-size    : 1.4em;
             line-height  : 20px;
         }
 
         .descripcion {
-            font-size      : 18px;
+            font-size      : 1.1em;
             line-height    : 22px;
             text-align     : justify;
             text-align-last: center;
