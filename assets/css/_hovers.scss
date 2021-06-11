@@ -16,10 +16,10 @@
         box-shadow        : 0px 0px 10px 5px rgba(0,0,0,0.3);
         z-index           : 2;
     }
-    .contacto .contenedor_pie .redes_sociales .rrss_link:hover {
+    .contacto .contenedor_pie .redes .rrss_link:hover {
         color: $color_principal;
     }
-    .contacto .contenedor_pie .redes_sociales .rrss_link:hover:after {
+    .contacto .contenedor_pie .redes .rrss_link:hover:after {
         @include scalar(1);
     }
     .contacto .contenedor_pie form .btn_form:hover {
