@@ -83,10 +83,16 @@ $(document).ready(function(){
     }
     else
     {
-        $('.contenedor_servicios').owlCarousel('destroy'); 
-        $('.contenedor_servicios').owlCarousel({touchDrag: false, mouseDrag: false});
-        $('.contenedor_galeria').owlCarousel('destroy'); 
-        $('.contenedor_galeria').owlCarousel({touchDrag: false, mouseDrag: false});
+        if( $('.contenedor_servicios').hasClass('owl-carousel') )
+        {
+            $('.contenedor_servicios').owlCarousel('destroy'); 
+            $('.contenedor_servicios').owlCarousel({touchDrag: false, mouseDrag: false});
+        }
+        if( $('.contenedor_galeria').hasClass('owl-carousel') )
+        {
+            $('.contenedor_galeria').owlCarousel('destroy'); 
+            $('.contenedor_galeria').owlCarousel({touchDrag: false, mouseDrag: false});
+        }
         $('.menu').removeClass('on');
     }
 
