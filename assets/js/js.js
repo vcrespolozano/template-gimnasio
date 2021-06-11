@@ -33,6 +33,9 @@ $(document).ready(function(){
 
         $('.menu li').removeClass('active');
         $(this).addClass('active');
+
+        if( ancho_pantalla < 768 )
+            $('.menu').removeClass('on');
     });
 
     // Scroll to content
