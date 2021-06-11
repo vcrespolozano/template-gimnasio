@@ -73,4 +73,15 @@ header {
     .toggle_menu {
         display: none;
     }
+
+    /*** HSCROLL ***/
+    .hscroll {
+        @include absolutePos(0, auto, 0, -1px);
+        background: $color_claro;
+        height    : 1px;
+        width     : 0;
+        margin    : 0 auto;
+        @include transicion(100ms);
+        z-index   : 3;
+    }
 }

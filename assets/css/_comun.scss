@@ -37,6 +37,11 @@ body {
   background : $color_claro;
 }
 
+strong {
+  font-weight: 600;
+  color      : $color_principal;
+}
+
 .izq {
   float: left;
 }
@@ -182,6 +187,18 @@ label.custom_checkbox {
   &.white {
     background-image: url('../img/separador_w.png');
   }
+}
+
+/*** ERROR FLORANTE CAMPOS */
+.error_form {
+  @include absolutePos(auto, auto, 4px, 4px);
+  color      : $color_claro;
+  font-size  : 15px;
+  background : #ff7f7f;
+  text-align : center;
+  padding    : 2px 5px;
+  line-height: 20px;
+  z-index    : 2;
 }
 
 /**** SCROLLBAR ****/
