@@ -41,6 +41,7 @@
 <body>
 
     <header>
+        <!-- El logo está en un tamaño de 512x256px , SE RECOMIENDA USAR ESTAS DIMENSIONES PARA SU ADAPTABILIDAD -->
          <span class="logo"></span>
          <nav class="menu">
              <ul>
@@ -50,6 +51,7 @@
                  <li id="go_galeria">Galería</li>
                  <li id="go_contacto">Contacto</li>
              </ul>
+             <span class="cerrar_menu"><i class="fas fa-times"></i></span>
          </nav>
          <span class="toggle_menu"><i class="fas fa-bars"></i></span>
         <!-- SCROLL BAR VIEWER (BARRA HORIZONTAL QUE INDICA EL SCROLL VERTICAL) -->
@@ -74,15 +76,6 @@
 
     <!-- SECCIÓN SOBRE NOSOTROS -->
     <section class="sobre_nosotros" id="sobre">
-        <div class="contenedor_carrusel izq">
-            <!-- ¡MÁXIMO 3 FOTOS! TAMAÑO IMÁGENES: 952px X 591px -->
-            <div class="carrusel owl-carousel">
-                <img src="resources/carrusel_1.jpg" alt="Gymnasus" />
-                <img src="resources/carrusel_2.jpg" alt="Gymnasus" />
-                <img src="resources/carrusel_3.jpg" alt="Gymnasus" />
-            </div>
-            <div class="dots_carrusel"></div>
-        </div>
         <div class="contenido der">
             <h2 class="titulo">Gymnasus</h2>
             <p class="subtitulo">Tu centro deportivo</p>
@@ -104,6 +97,15 @@
                 tortor. Donec quis elit nec purus porttitor volutpat. Donec dapibus non enim congue sodales. Nam est nisl, ultricies
                 lacinia massa egestas, ultrices pulvinar magna.
             </p>
+        </div>
+        <div class="contenedor_carrusel izq">
+            <!-- ¡MÁXIMO 3 FOTOS! TAMAÑO IMÁGENES: 952px X 591px -->
+            <div class="carrusel owl-carousel">
+                <img src="resources/carrusel_1.jpg" alt="Gymnasus" />
+                <img src="resources/carrusel_2.jpg" alt="Gymnasus" />
+                <img src="resources/carrusel_3.jpg" alt="Gymnasus" />
+            </div>
+            <div class="dots_carrusel"></div>
         </div>
         <span class="limpiar"></span>
     </section>
@@ -203,25 +205,27 @@
     <section class="contacto" id="contacto">
         <div class="contenedor_pie">
             <div class="bloque_pie" id="bloque_ubicacion">
-                <div class="titulo">UBICACIÓN</div>
-                <ul>
-                    <li>Dirección línea 1</li>
-                    <li>Dirección línea 2</li>
-                    <li>Teléfono/Móvil</li>
-                    <li>Email</li>
-                </ul>
-                <div class="titulo">HORARIO</div>
-                <ul>
-                    <li><strong>Todo el día:</strong> De 8:00 a 23:00</li>
-                </ul>
-            </div>
-            <div class="bloque_pie" id="bloque_redes">
-                <div class="titulo">SÍGUENOS</div>
-                <div class="redes_sociales">
-                    <a class="rrss_link" href="javascript:void(0);" target="_blank" title="Facebook" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
-                    <a class="rrss_link" href="javascript:void(0);" target="_blank" title="Twitter" rel="nofollow"><i class="fab fa-twitter"></i></a>
-                    <a class="rrss_link" href="javascript:void(0);" target="_blank" title="Instagram" rel="nofollow"><i class="fab fa-instagram"></i></a>
-                    <a class="rrss_link" href="javascript:void(0);" target="_blank" title="TikTok" rel="nofollow"><i class="fab fa-tiktok"></i></a>
+                <div class="sub_bloque" id="informacion">
+                    <div class="titulo">UBICACIÓN</div>
+                    <ul>
+                        <li>Dirección línea 1</li>
+                        <li>Dirección línea 2</li>
+                        <li>Teléfono/Móvil</li>
+                        <li>Email</li>
+                    </ul>
+                    <div class="titulo">HORARIO</div>
+                    <ul>
+                        <li><strong>Todo el día:</strong> De 8:00 a 23:00</li>
+                    </ul>
+                </div>
+                <div class="sub_bloque" id="redes">
+                    <div class="titulo">SÍGUENOS</div>
+                    <div class="redes">
+                        <a class="rrss_link" href="javascript:void(0);" target="_blank" title="Facebook" rel="nofollow"><i class="fab fa-facebook-f"></i></a>
+                        <a class="rrss_link" href="javascript:void(0);" target="_blank" title="Twitter" rel="nofollow"><i class="fab fa-twitter"></i></a>
+                        <a class="rrss_link" href="javascript:void(0);" target="_blank" title="Instagram" rel="nofollow"><i class="fab fa-instagram"></i></a>
+                        <a class="rrss_link" href="javascript:void(0);" target="_blank" title="TikTok" rel="nofollow"><i class="fab fa-tiktok"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="bloque_pie" id="bloque_contacto">

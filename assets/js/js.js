@@ -45,6 +45,51 @@ $(document).ready(function(){
         validarContacto();
     });
 
+    // PARA MÓVIL
+    if( ancho_pantalla < 768 )
+    {
+        /** CARRUSEL/SLIDER - SERVICIOS */
+        $('.contenedor_servicios').addClass('owl-carousel');
+        $('.contenedor_servicios').owlCarousel({
+            autoplay       : true,
+            autoplayTimeout: 5000,
+            loop           : true,
+            margin         : 0,
+            nav            : false,
+            dots           : true,
+            items          : 1,
+        });
+
+        /*** CARRUSEL/SLIDER - GALERIA */
+        $('.contenedor_galeria').addClass('owl-carousel');
+        $('.contenedor_galeria').owlCarousel({
+            autoplay       : true,
+            autoplayTimeout: 5000,
+            loop           : true,
+            margin         : 0,
+            nav            : true,
+            dots           : false,
+            navText        : ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+            items          : 1,
+        });
+
+        $('.toggle_menu').click(function(){
+            $('.menu').addClass('on');
+        });
+
+        $('.cerrar_menu').click(function(){
+            $('.menu').removeClass('on');
+        });
+    }
+    else
+    {
+        $('.contenedor_servicios').owlCarousel('destroy'); 
+        $('.contenedor_servicios').owlCarousel({touchDrag: false, mouseDrag: false});
+        $('.contenedor_galeria').owlCarousel('destroy'); 
+        $('.contenedor_galeria').owlCarousel({touchDrag: false, mouseDrag: false});
+        $('.menu').removeClass('on');
+    }
+
 });
 
 $(window).on('load', function(){   
@@ -101,7 +146,7 @@ $(window).on('resize', function(){
 /** Función que iguala los altos de SOBRE MI */
 const altos_about = () => {
 
-    if( ancho_pantalla > 767 )
+    if( ancho_pantalla > 1600 )
     {
         let alto_carrusel  = $('.sobre_nosotros .contenedor_carrusel').outerHeight(true);
         let alto_contenido = $('.sobre_nosotros .contenido').outerHeight(true);
@@ -110,6 +155,11 @@ const altos_about = () => {
             $('.sobre_nosotros .contenido').css('height', alto_carrusel + 'px');
         else
             $('.sobre_nosotros .contenedor_carrusel').css('height', alto_contenido + 'px');
+    }
+    else
+    {
+        $('.sobre_nosotros .contenido').css('height', 'auto');
+        $('.sobre_nosotros .contenedor_carrusel').css('height', 'auto');
     }
 
 }

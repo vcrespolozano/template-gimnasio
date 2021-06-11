@@ -31,18 +31,13 @@
             z-index  : 1;
 
             &#bloque_ubicacion {
-                flex-basis: 30%;
+                flex-basis: 55%;
                 order     : 1;
-            }
-
-            &#bloque_redes {
-                flex-basis: 25%;
-                order     : 2;
             }
 
             &#bloque_contacto {
                 flex-basis: 45%;
-                order     : 3;
+                order     : 2;
             }
 
             .titulo {
@@ -68,9 +63,23 @@
                     }
                 }
             }
+
+            .sub_bloque {
+                display       : inline-block;
+                vertical-align: top;
+
+                &#redes {
+                    width        : 300px;
+                    padding-right: 10px;
+                }
+
+                &#informacion {
+                    width: calc(100% - 304px);
+                }
+            }
         }
 
-        .redes_sociales {
+        .redes {
             display   : block;
             margin-top: 15px;
 
