@@ -48,6 +48,19 @@ $(document).ready(function(){
         validarContacto();
     });
 
+    // Pop política
+    $('#abrir_politica').click(function(e){
+        // // Para evitar que abrir la política marque/desmarque el check
+        e.stopPropagation();
+        e.preventDefault();
+
+        $('body').addClass('popuped');
+    });
+
+    $('.cerrar_popup').click(function(){
+        $('body').removeClass('popuped');
+    });
+
     // PARA MÓVIL
     if( ancho_pantalla < 768 )
     {
@@ -191,6 +204,7 @@ const validarContacto = () => {
     let telefono = $('#contacto input[name="telefono"]');
     let email    = $('#contacto input[name="email"]');
     let mensaje  = $('#contacto textarea[name="mensaje"]');
+    let politica = $('#contacto input[name="politica"]');
 
     // Nombre
     if( nombre.val() == '' || nombre.val().length < 2 )
@@ -237,6 +251,12 @@ const validarContacto = () => {
     else
         mensaje.removeClass('errored');
 
+    // Política
+    if( !politica.prop('checked') )
+        politica.siblings('.checkbox').addClass('errored');
+    else
+        politica.siblings('.checkbox').removeClass('errored');
+
     // Limpiamos los errores flotantes al cabo de 4 segundos
     if( $('.error_form').length > 0 )
     {
@@ -244,6 +264,7 @@ const validarContacto = () => {
             $('.error_form').remove();
             $('#contacto input').removeClass('errored');
             $('#contacto textarea').removeClass('errored');
+            $('#contacto .checkbox').removeClass('errored');
         }, 4000);
     }
     else

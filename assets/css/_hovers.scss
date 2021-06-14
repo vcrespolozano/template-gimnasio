@@ -16,15 +16,22 @@
         box-shadow        : 0px 0px 10px 5px rgba(0,0,0,0.3);
         z-index           : 2;
     }
-    .contacto .contenedor_pie .redes .rrss_link:hover {
+    .contacto .contenedor_contacto .redes .rrss_link:hover {
         color: $color_principal;
     }
-    .contacto .contenedor_pie .redes .rrss_link:hover:after {
+    .contacto .contenedor_contacto .redes .rrss_link:hover:after {
         @include scalar(1);
     }
-    .contacto .contenedor_pie form .btn_form:hover {
+    .contacto .contenedor_contacto form .btn_form:hover {
         background  : $color_claro;
         color       : $color_principal;
         border-color: $color_principal;
+    }
+    .contacto .contenedor_contacto form label.custom_checkbox .checkbox_link:hover {
+        color: $color_principal;
+    }
+    .popup .cerrar_popup:hover {
+        background-color: $color_principal;
+        color           : $color_claro;
     }
 }

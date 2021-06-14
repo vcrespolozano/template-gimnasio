@@ -87,16 +87,16 @@
     .contacto {
         padding: 30px 20px;
     }
-    .contacto .contenedor_pie .bloque_pie .sub_bloque#redes {
+    .contacto .contenedor_contacto .bloque_contacto .sub_bloque#redes {
         width: 230px;
     }
-    .contacto .contenedor_pie .bloque_pie .sub_bloque#informacion {
+    .contacto .contenedor_contacto .bloque_contacto .sub_bloque#informacion {
         width: calc(100% - 234px);
     }
-    .contacto .contenedor_pie .redes .rrss_link {
+    .contacto .contenedor_contacto .redes .rrss_link {
         margin: 0 6px 12px;
     }
-    .contacto .contenedor_pie .redes .rrss_link:nth-child(2n+1) {
+    .contacto .contenedor_contacto .redes .rrss_link:nth-child(2n+1) {
         margin-left: 0;
     }
 }
@@ -108,18 +108,18 @@
     .galeria .contenedor_galeria .item_galeria {
         width: 33%;
     }
-    .contacto .contenedor_pie .bloque_pie .sub_bloque#redes,
-    .contacto .contenedor_pie .bloque_pie .sub_bloque#informacion {
+    .contacto .contenedor_contacto .bloque_contacto .sub_bloque#redes,
+    .contacto .contenedor_contacto .bloque_contacto .sub_bloque#informacion {
         width: 100%;
     }
-    .contacto .contenedor_pie .bloque_pie .sub_bloque#redes {
+    .contacto .contenedor_contacto .bloque_contacto .sub_bloque#redes {
         margin-top: 10px;
     }
-    .contacto .contenedor_pie .bloque_pie#bloque_ubicacion {
+    .contacto .contenedor_contacto .bloque_contacto#bloque_ubicacion {
         flex-basis: auto;
         width     : 40%;
     }
-    .contacto .contenedor_pie .bloque_pie#bloque_contacto {
+    .contacto .contenedor_contacto .bloque_contacto#bloque_formulario {
         flex-basis: auto;
         width     : 60%;
     }
@@ -176,23 +176,23 @@
     .contacto {
         padding: 0 20px;
     }
-    .contacto .contenedor_pie .bloque_pie#bloque_ubicacion {
+    .contacto .contenedor_contacto .bloque_contacto#bloque_ubicacion {
         width     : 100%;
         margin    : 15px 0;
         text-align: center;
         order     : 2;
     }
-    .contacto .contenedor_pie .bloque_pie#bloque_contacto {
+    .contacto .contenedor_contacto .bloque_contacto#bloque_formulario {
         width     : 100%;
         margin    : 15px 0;
         text-align: center;
         order     : 1;
     }
-    .contacto .contenedor_pie .bloque_pie .sub_bloque#redes {
+    .contacto .contenedor_contacto .bloque_contacto .sub_bloque#redes {
         padding: 0;
     }
-    .contacto .contenedor_pie .redes .rrss_link,
-    .contacto .contenedor_pie .redes .rrss_link:nth-child(2n+1) {
+    .contacto .contenedor_contacto .redes .rrss_link,
+    .contacto .contenedor_contacto .redes .rrss_link:nth-child(2n+1) {
         margin: 0 5px;
     }
     .contacto .contenedor_pie form .caja_campo input,
@@ -236,6 +236,15 @@
     footer p {
         font-size: 16px;
         line-height: 45px;
+    }
+
+    .popup {
+        padding: 70px 15px 15px;
+    }
+    .popup .descripcion {
+        max-height   : 400px;
+        overflow-y   : auto;
+        padding-right: 10px;
     }
 }
 

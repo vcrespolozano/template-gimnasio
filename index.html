@@ -203,8 +203,8 @@
 
     <!-- CONTACTO -->
     <section class="contacto" id="contacto">
-        <div class="contenedor_pie">
-            <div class="bloque_pie" id="bloque_ubicacion">
+        <div class="contenedor_contacto">
+            <div class="bloque_contacto" id="bloque_ubicacion">
                 <div class="sub_bloque" id="informacion">
                     <div class="titulo">UBICACIÓN</div>
                     <ul>
@@ -228,7 +228,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bloque_pie" id="bloque_contacto">
+            <div class="bloque_contacto" id="bloque_formulario">
                 <div class="titulo">Contacto</div>
                 <form method="post" action="" id="form_contacto">
                     <div class="caja_campo">
@@ -248,6 +248,12 @@
                         <label for="mensaje">Mensaje</label>
                         <textarea name="mensaje" maxlength="200" placeholder="Mensaje"></textarea>
                     </div>
+                    <label class="custom_checkbox">
+                        <input type="checkbox" name="politica" value="si">
+                        <span class="checkbox"></span>
+                        Acepto la
+                        <span class="checkbox_link" id="abrir_politica">Política de privacidad</span>
+                    </label>
                     <button type="button" form="form_contacto" class="btn_form" id="submit">Enviar</button>
                 </form>
             </div>
@@ -258,6 +264,48 @@
     <footer>
         <p><span id="year"></span> &copy;<strong>GYMNASUS</strong> Todos los derechos reservados.</p>
     </footer>
+
+    <!-- POP POLÍTICA -->
+    <div class="popup">
+        <span class="cerrar_popup"><i class="fas fa-times"></i></span>
+        <div class="titulo">Política de privacidad</div>
+        <div class="descripcion">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non egestas mauris, vel porta nulla. Aenean sit
+                amet faucibus magna, eget luctus arcu. Morbi semper dui quis magna vestibulum tempus. Donec ut sollicitudin metus.
+                Pellentesque porta gravida tellus sed hendrerit. Integer quis est a quam pulvinar lobortis eu sed nisi. Vestibulum
+                placerat ante eget urna elementum iaculis. Sed sapien est, porta eu mi eu, tincidunt dapibus dolor. Integer
+                porttitor lacus in maximus lobortis. Proin luctus non ex ac ullamcorper. Donec accumsan, nibh eu convallis
+                convallis, lacus metus sollicitudin ex, nec lacinia dui ligula in lorem. Integer quis urna pharetra, eleifend sapien
+                in, luctus nisi. Aliquam vestibulum erat nibh, in molestie odio ullamcorper sed. In rutrum erat sit amet malesuada
+                interdum.
+            </p>
+            <p>
+                In hac habitasse platea dictumst. Sed commodo lacus gravida, blandit nibh vitae, aliquet mauris. Morbi scelerisque
+                tellus sed convallis ornare. Nulla efficitur ligula eros, eu auctor lacus pretium in. Curabitur id scelerisque
+                risus. Ut aliquet dolor mattis lacus laoreet suscipit non et nunc. Etiam mattis scelerisque ante, at hendrerit urna
+                commodo et. Maecenas vehicula augue tortor, quis sollicitudin ante tristique vel. Proin metus massa, pharetra at
+                aliquam sit amet, faucibus non leo. Pellentesque ac neque urna.
+            </p>
+            <p>
+                Aliquam rhoncus, leo a condimentum dignissim, felis tellus pulvinar velit, id mollis nisl tellus vel metus.
+                Suspendisse sed sodales odio, at malesuada velit. Ut venenatis nulla nec arcu condimentum, placerat pulvinar urna
+                accumsan. Cras cursus elit orci, ac lobortis augue malesuada eu. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo elit, rutrum sed diam eu, venenatis
+                faucibus lacus. Etiam non commodo dolor, eu varius augue. Vivamus porttitor bibendum velit, nec venenatis tortor
+                lobortis vitae. Etiam congue porta diam, nec pretium justo pulvinar ut. In ac imperdiet sem, vel iaculis libero.
+                Vestibulum feugiat nibh eu consequat fermentum. Aenean maximus sapien sed vulputate consequat. Nam ut sem eget nisi
+                sagittis sagittis in nec ante. Nunc et purus tincidunt, gravida felis nec, aliquam ante. Duis eu dolor sit amet nunc
+                rutrum accumsan et eu turpis.
+            </p>
+            <p>
+                Vestibulum nec enim sit amet felis aliquam venenatis id vel nulla. Etiam non leo tellus. Donec dolor purus,
+                vestibulum vel vestibulum eu, sodales et dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut
+                fermentum nec magna sed hendrerit. Ut ultricies sodales lorem, eget commodo augue efficitur eget. Donec eget luctus
+                mi, id venenatis lacus.
+            </p>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
